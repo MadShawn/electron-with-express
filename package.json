@@ -1,22 +1,49 @@
 {
-  "name": "electron-with-express",
-  "description": "Demonstrates spawning Express from Electron and using it to serve content",
-  "version": "0.11.0",
-  "main": "main.js",
-  "authors": [
-    "Frank Hale <frankhale@gmail.com>"
-  ],
-  "license": "GPL-3.0",
-  "private": true,
-  "scripts": {
-    "start": ".\\node.exe start-electron.js"
-  },
-  "dependencies": {
-    "electron": "^3.0.13",
-    "jquery": "^3.3.1",
-    "keymaster": "^1.6.2",
-    "lodash": "^4.17.11",
-    "request": "^2.88.0",
-    "strip": "^3.0.0"
-  }
+    "name": "electron-with-express",
+    "description": "Demonstrates spawning Express from Electron and using it to serve content",
+    "version": "0.11.0",
+    "main": "main.js",
+    "authors": [
+        "Frank Hale <frankhale@gmail.com>"
+    ],
+    "license": "GPL-3.0",
+    "private": true,
+    "build": {
+        "appId": "com.test.app",
+        "mac": {
+            "target": [
+                "dmg",
+                "zip"
+            ]
+        },
+        "win": {
+            "target": [
+                "nsis",
+                "zip"
+            ]
+        }
+    },
+    "scripts": {
+        "start": ".\\node.exe start-electron.js",
+        "build": "electron-builder --win --x64"
+    },
+    "dependencies": {
+        "jquery": "^3.3.1",
+        "keymaster": "^1.6.2",
+        "lodash": "^4.17.11",
+        "request": "^2.88.0",
+        "strip": "^3.0.0",
+        "body-parser": "^1.18.3",
+        "cookie-parser": "^1.4.3",
+        "debug": "^4.1.0",
+        "express": "^4.16.4",
+        "getmac": "^4.1.0",
+        "hbs": "^4.0.1",
+        "morgan": "^1.9.1",
+        "serve-favicon": "^2.5.0"
+    },
+    "devDependencies": {
+        "electron": "^3.1.13",
+        "electron-builder": "^22.1.0"
+    }
 }
