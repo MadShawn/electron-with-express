@@ -24,7 +24,8 @@
     },
     "scripts": {
         "start": ".\\node.exe start-electron.js",
-        "build": "electron-builder --win --x64"
+        "build:win": "electron-builder --win --x64",
+        "build:mac": "electron-builder --mac --x64"
     },
     "dependencies": {
         "jquery": "^3.3.1",
